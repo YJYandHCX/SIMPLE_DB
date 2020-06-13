@@ -33,6 +33,12 @@ SIMPLE_DB 是一个基于LSM-Tree的 NoSQL, Key-Value嵌入式数据库
 		* 在读取过后将list 节点摘下,然后放队头
 		* 若插入超过上限，就删除list的队尾元素，并通过队尾元素的key值删除map中的相应值
 
+	+ 日志系统
+		* 采用atomic_flag实现线程安全
+		* 实现一个写缓冲区
+		* 用一个线程做sync同步写入
+![avatar](./PIC/pic/4.png)
+
 
 ## SIMPLE-DB的主要结构
 ### LSM-Tree 结构
@@ -78,3 +84,9 @@ SIMPLE-DB采用了LSM-Tree结构，但是由于只是模拟，只采用了2个Le
 + 没办法多线程写入
 	* 原因：其实是设计的的可以多线程写入，但是不知道哪个地方delete了两次，所以会报错。
 	* 方法：都改成智能指针shared_ptr
++ 不支持流式日志写入
+	* 方法：重载<<实现流式的写入
++ 后续实现持久化和原子性
+	* 实现wal
++ 考虑后续数据库的复制问题
+	* 实现类似mysql bin日志，或者类似redis的AOF持久化或者RDB持久化
