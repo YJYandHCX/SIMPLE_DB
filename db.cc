@@ -291,7 +291,7 @@ std::string database::Get(std::string K){
             
         std::vector<int> r = run_maps[0]->return_id(key);
         
-        std::cout<<"I am OK"<<std::endl;
+        //std::cout<<"I am OK"<<std::endl;
             
         for (auto x:r){
                 //std::cout<<x<<std::endl;
@@ -317,7 +317,7 @@ std::string database::Get(std::string K){
 
     if (bloomfilters[1]->VaryExit(key)){
 
-            std::cout<<"I am Wrong"<<std::endl;
+            //std::cout<<"I am Wrong"<<std::endl;
 
             std::vector<int> r = run_maps[1]->return_id(key);
 
