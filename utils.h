@@ -39,6 +39,6 @@ namespace SIMPLE_DB {
 	std::string trans_value_to_string(std::bitset<value_bitset_long> kbt);
 
 	//抄来的代码，获取文件夹里边所有的文件
-	bool get_all_files(std::string dir_in, std::vector<std::string> files);
+	bool get_all_files(std::string dir_in, std::vector<std::string>& files);
 }
 
