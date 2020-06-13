@@ -10,12 +10,12 @@ SIMPLE_DB 是一个基于LSM-Tree的 NoSQL, Key-Value嵌入式数据库
 
 ## 安装测试的方法
     git clone https://github.com/YJYandHCX/SIMPLE_DB
-    	cd SIMPLE_DB/
-	make
-	cp ./libSimple_db.a ./examples
-	g++ db_test.cc libSimple_db.a -lpthread -std=c++11 -o test
-	chmod +x ./test
-	sudo ./test
+    cd SIMPLE_DB/
+    make
+    cp ./libSimple_db.a ./examples
+    g++ db_test.cc libSimple_db.a -lpthread -std=c++11 -o test
+    chmod +x ./test
+    sudo ./test
 
 ## SIMPLE-DB 实现主要技术与细节
 + 主要技术如下
