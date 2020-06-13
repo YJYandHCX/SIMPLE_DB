@@ -125,7 +125,7 @@ std::string SIMPLE_DB::trans_value_to_string(std::bitset<value_bitset_long> kbt)
 }
 
 	//抄来的代码，获取文件夹里边所有的文件
-bool SIMPLE_DB::get_all_files(std::string dir_in, std::vector<std::string> files) {
+bool SIMPLE_DB::get_all_files(std::string dir_in, std::vector<std::string>& files) {
     if (dir_in.empty()) {
         return false;
     }
