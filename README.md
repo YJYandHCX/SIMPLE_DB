@@ -1,8 +1,8 @@
-SIMPLE_DB
+# SIMPLE_DB
 
-**SIMPLE_DB 是一个基于LSM-Tree的嵌入式数据库**
+** SIMPLE_DB 是一个基于LSM-Tree的嵌入式数据库 **
 
-简介
+## 简介
 在实习期间，对[RocksDB](https://github.com/facebook/rocksdb "RocksDB")学习之后，想要自己实现一个类似的基于LSM-Tree的嵌入式数据库，在实习的业余时间完成。
 
 ## 开发语言和环境
