@@ -13,6 +13,7 @@ SIMPLE_DB 是一个基于LSM-Tree的 NoSQL, Key-Value嵌入式数据库
     cd SIMPLE_DB/
     make
     cp ./libSimple_db.a ./examples
+    cd examples
     g++ db_test.cc libSimple_db.a -lpthread -std=c++11 -o test
     chmod +x ./test
     sudo ./test
