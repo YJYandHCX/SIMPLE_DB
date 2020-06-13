@@ -36,7 +36,8 @@ SIMPLE_DB 是一个基于LSM-Tree的 NoSQL, Key-Value嵌入式数据库
 
 ## SIMPLE-DB的主要结构
 ### LSM-Tree 结构
-SIMPLE-DB采用了LSM-Tree结构，但是由于只是模拟，只采用了2个Level，L0和L1。结构如下图
+SIMPLE-DB采用了LSM-Tree结构，但是由于只是模拟，只采用了2个Level，L0和L1。结构如下图：
+![avatar](./PIC/pic/2.png)
 
 ### 写入的流程
 在插入K-V过程中，先把写入内存中的memtables。在memtables的数目到达上限之后，会使用std::bind打包好放入flush threadpool 的任务队列中，异步的写入硬盘。
