@@ -18,6 +18,7 @@ SIMPLE_DB 是一个基于LSM-Tree的 NoSQL, Key-Value嵌入式数据库
     chmod +x ./test
     sudo ./test
 测试结果在centos 7如图：
+
 ![avatar](./PIC/pic/5.png)
 ## SIMPLE-DB 实现主要技术与细节
 + 主要技术如下
